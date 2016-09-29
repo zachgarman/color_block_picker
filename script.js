@@ -95,6 +95,8 @@ $(document).ready(function () {
       $response = 'Nope! You picked ' + $blockID + '. Try again, Dummy!';
     }
     var $colorResponse = '<span id="response">' + $response + '</span></h3>';
+    $('.choice').remove();
+    $(this).append('<p class="choice">' + $blockID + '</p>');
     $('#response').replaceWith($colorResponse);
     $('#response').css('color', $blockID);
     console.log('A ' + $blockID + ' block was selected');
