@@ -1,0 +1,91 @@
+body {
+  background-color: darkslategray;
+  color: #bbbbbb;
+}
+h1, p {
+  text-align: center;
+}
+h1 {
+  font-size: 60px;
+  text-decoration: underline;
+}
+p {
+  font-size: 200%;
+  margin-top: -40px;
+}
+#startGame {
+  font-size: 35px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.2), 12px 12px 12px 0 rgba(0,0,0,0.19);
+}
+#startGame:hover {
+  background-color: darkslategray;
+  color: white;
+}
+form, #startGame{
+  margin-left: 50px;
+  display: inline-block;
+}
+form {
+  font-size: 22px;
+}
+h3 {
+  margin-left: 50px;
+  font-size: 30px;
+}
+#response {
+  margin-left: 30px;
+}
+.block {
+  width: 150px;
+  height: 150px;
+  margin: 10px 20px;
+  border: 1px solid black;
+  float: left;
+}
+#blocks {
+  width: 800px;
+}
+#blue:hover, #red:hover, #yellow:hover,
+#green:hover, #purple:hover, #white:hover,
+#black:hover, #orange:hover, #gray:hover,
+#pink:hover, #gold:hover, #silver:hover {
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.4), 0 16px 16px 16px rgba(0,0,0,0.19);
+}
+#blue {
+  background-color: blue;
+}
+#red {
+  background-color: red;
+}
+#yellow {
+  background-color: yellow;
+}
+#green {
+  background-color: green;
+}
+#purple {
+  background-color: purple;
+}
+#white {
+  background-color: white;
+}
+#black {
+  background-color: black;
+}
+#orange {
+  background-color: orange;
+}
+#gray {
+  background-color: gray;
+}
+#pink {
+  background-color: pink;
+}
+#gold {
+  background-color: gold;
+}
+#silver {
+  background-color: silver;
+}
