@@ -95,6 +95,7 @@ $(document).ready(function () {
       $response = 'Nope! You picked ' + $blockID + '. Try again, Dummy!';
     }
     var $colorResponse = '<span id="response">' + $response + '</span></h3>';
+    //remove all color box labels and replace with most recently clicked box label
     $('.choice').remove();
     $(this).append('<p class="choice">' + $blockID + '</p>');
     $('#response').replaceWith($colorResponse);
