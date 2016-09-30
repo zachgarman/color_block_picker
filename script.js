@@ -13,6 +13,8 @@ $(document).ready(function () {
 
   //button to start the game (run loadBlocks)
   $('#startGame').on('click', newGame);
+  $('#startGame').on('keypress', newGame);
+
 
   //loadBlocks function should also run function to see what the input is in the form
   // and use that many blocks
