@@ -61,6 +61,13 @@ $(document).ready(function () {
       var usedChoice = choices.splice(num,1).join();
       restartChoices.push(usedChoice);
       var $block = $('<div class="block" id="' + boxColor + '"></div>');
+      $($block).css('background-color', boxColor);
+      $($block).hover(function () {
+        $(this).css('box-shadow', '0 0 10px 10px rgba(0,0,0,0.4), 0 16px 16px 16px rgba(0,0,0,0.19)')
+      }, function() {
+        $(this).css('box-shadow', '0 0 0 0 rgba(0,0,0,0)');
+      });
+      //'box-shadow', '0 0 10px 10px rgba(0,0,0,0.4), 0 16px 16px 16px rgba(0,0,0,0.19)');
       //append the dom
       $('#blocks').append($block);
     }
