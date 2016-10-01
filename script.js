@@ -7,14 +7,12 @@ $(document).ready(function () {
   var $selection;
 
 
-  loadBlocks(totalChoices);
+  loadBlocks(numBlocks());
   //jquery used to check which blocks are clicked
   $('#blocks').on('click', '.block', verifySelection);
 
   //button to start the game (run loadBlocks)
-  $('#startGame').on('click', newGame);
-  $('#startGame').on('keypress', newGame);
-
+  $('#blockInput').on('submit', newGame);
 
   //loadBlocks function should also run function to see what the input is in the form
   // and use that many blocks
@@ -23,7 +21,8 @@ $(document).ready(function () {
   }
 
   //function to append the dom, remove old game, and start new.
-  function newGame () {
+  function newGame (event) {
+    event.preventDefault();
     $('#blocks').children('.block').remove();
     //empties restartChoices and puts values back into choices array
     for (var i = 0; i < restartTotalChoices; i++) {
@@ -45,7 +44,6 @@ $(document).ready(function () {
     for (var i = restartTotalChoices; i > num; i--) {
       restartChoices.push(choices.pop());
     }
-
     totalChoices = choices.length;
     //Pick the random color to be selected from the list.
     $selection = blockSelected();
@@ -109,7 +107,6 @@ $(document).ready(function () {
     $(this).append('<p class="choice">' + $blockID + '</p>');
     $('#response').replaceWith($colorResponse);
     $('#response').css('color', $blockID);
-    console.log('A ' + $blockID + ' block was selected');
   }
 
   //function to light up block that was picked
